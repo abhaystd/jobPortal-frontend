@@ -48,6 +48,10 @@ label {
     margin: 1rem;
     width: 90%;
 }
+.button_common:hover{
+  background-color: rgb(158, 211, 51);
+  color: rgb(224, 133, 133);
+}
 .error {
     color: red;
     text-align: left;
@@ -80,12 +84,7 @@ label {
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-/* body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
-  }
-   */
+/*
   
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */

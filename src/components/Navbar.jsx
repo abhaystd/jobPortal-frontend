@@ -6,7 +6,6 @@ function Navbar() {
             <div className="container">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li>
-                        {/* <a className="navbar-brand" href="/">Job Seeker's</a> */}
                         <Link to="/" className="navbar-brand">Job Seeker's</Link>
                     </li>
 

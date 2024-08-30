@@ -1,8 +1,9 @@
 
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import axios from "axios";
 import FormData from "form-data";
 const Signup = () => {
+  const [isSubmitting,setSubmitting]=useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [user, setUserDetails] = useState({
@@ -11,8 +12,9 @@ const Signup = () => {
     email: "",
     password: "",
     conformPassword: "", 
-    file: File, // To store the uploaded file
+    file: null, 
   });
+  const fileInputRef=useRef(null);
   console.log(user);
   
   const changeHandler = (e) => {
@@ -74,7 +76,8 @@ const Signup = () => {
       formData.append("file", user.file);
 
       console.log(formData);
-      // /api/v1/signup
+      
+      setSubmitting(true);
       // const base_url="http://localhost:4000"
       const base_url="https://job-portal-backend-piiu.onrender.com"
       try {
@@ -85,12 +88,26 @@ const Signup = () => {
           },}
         );
         alert(response.data.message);
+        setSubmitting(false);
+        setUserDetails({
+          firstName: "",
+           lastName: "",
+          email: "",
+           password: "",
+          conformPassword: "", 
+          file:null,
+         });
+         if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
       } 
       catch (error) {
         console.error("There was an error signing up!", error);
         alert("Failed to register. Please try again.");
       }
+
     }
+    
   };
 
   return (
@@ -169,15 +186,17 @@ const Signup = () => {
             type="file"
             name="file"
             id="resume"
+            ref={fileInputRef}
             onChange={fileChangeHandler}
           />
         </label>
         <p className="error">{formErrors.resume}</p>
         <p className="redAlert">Please wait while we process your request after you've clicked the registration button.</p>
         <p>A alert will show after registration it can take time upto 45 second.</p>
-        <button className="button_common" type="submit">
+        <button className="button_common" type="submit" disabled={isSubmitting}>
           Register
         </button>
+        
       </form>
     </div>
   );
