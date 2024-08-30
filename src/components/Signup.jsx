@@ -174,6 +174,7 @@ const Signup = () => {
         </label>
         <p className="error">{formErrors.resume}</p>
         <p className="redAlert">Please wait while we process your request after you've clicked the registration button.</p>
+        <p>A alert will show after registration it can take time upto 45 second.</p>
         <button className="button_common" type="submit">
           Register
         </button>
