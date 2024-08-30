@@ -17,7 +17,7 @@ function Navbar() {
 
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link " href="/signup" >Sign up</a>
+                        <a className="nav-link " href="signup" >Sign up</a>
                     </li>
                 </ul>
                 <form>

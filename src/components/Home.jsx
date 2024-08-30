@@ -19,7 +19,7 @@ function Home() {
                                 <h1>Welcome to you on job Seeker's</h1>
                                 <p>Sign up on reputed job portals job Seeker's to find job openings that match your qualifications and interests.
                                     .</p>
-                                <p><a className="btn btn-lg btn-primary" href="/signup">Sign up today</a></p>
+                                <p><a className="btn btn-lg btn-primary" href="signup">Sign up today</a></p>
                             </div>
                         </div>
                     </div>
