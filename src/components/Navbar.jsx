@@ -1,23 +1,24 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
             <div className="container">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li>
-                        <a className="navbar-brand" href="/">Job Seeker's</a>
+                        {/* <a className="navbar-brand" href="/">Job Seeker's</a> */}
+                        <Link to="/" className="navbar-brand">Job Seeker's</Link>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/">Home</a>
+                    <span  aria-current="page" ><Link to="/" className="nav-link active">Home</Link></span>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link"href="/" >About us</a>
+                    <Link to="/" className="nav-link">About us</Link>
 
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link " href="signup" >Sign up</a>
+                    <Link to="/signup" className="nav-link ">Sign up</Link>
                     </li>
                 </ul>
                 <form>

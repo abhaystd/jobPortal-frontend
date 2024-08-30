@@ -59,6 +59,7 @@ const Signup = () => {
   };
 
   const signupHandler = async (e) => {
+
     e.preventDefault();
     setFormErrors(validateForm(user));
     setIsSubmit(true);
@@ -172,7 +173,7 @@ const Signup = () => {
           />
         </label>
         <p className="error">{formErrors.resume}</p>
-
+        <p className="redAlert">Please wait while we process your request after you've clicked the registration button.</p>
         <button className="button_common" type="submit">
           Register
         </button>

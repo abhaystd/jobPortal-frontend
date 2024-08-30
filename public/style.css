@@ -3,7 +3,9 @@
     margin: 0;
     
 }
-
+.redAlert{
+  color: red;
+}
 
 .register {
     width: 60%;

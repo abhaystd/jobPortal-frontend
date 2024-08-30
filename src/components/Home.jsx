@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import C1 from "./img/coursel/c1.png"
 import C2 from "./img/coursel/c2.png"
 import C3 from "./img/coursel/c3.png"
@@ -19,7 +20,7 @@ function Home() {
                                 <h1>Welcome to you on job Seeker's</h1>
                                 <p>Sign up on reputed job portals job Seeker's to find job openings that match your qualifications and interests.
                                     .</p>
-                                <p><a className="btn btn-lg btn-primary" href="signup">Sign up today</a></p>
+                                <p><Link className="btn btn-lg btn-primary" to="signup">Sign up today</Link></p>
                             </div>
                         </div>
                     </div>
@@ -29,7 +30,7 @@ function Home() {
                             <div className="carousel-caption">
                                 <h1>Find the most exciting jobs.</h1>
                                 <p>To know more click on learn more.</p>
-                                <p><a className="btn btn-lg btn-primary" href="/" >Learn more</a></p>
+                                <p><Link className="btn btn-lg btn-primary" to="/" >Learn more</Link></p>
                                 
                             </div>
                         </div>
@@ -40,7 +41,7 @@ function Home() {
                             <div className="carousel-caption text-end">
                                 <h1>Sign up on reputed job portals.</h1>
                                 <p>Some representative placeholder content for the third slide of this carousel.</p>
-                                <p><a className="btn btn-lg btn-primary" href="/">Browse gallery</a></p>
+                                <p><Link className="btn btn-lg btn-primary" to="/">Browse gallery</Link></p>
                                 
                             </div>
                         </div>
@@ -61,7 +62,7 @@ function Home() {
                         <img className="bd-placeholder-img rounded-circle" width="140" height="140" src="https://images.pexels.com/photos/4164088/pexels-photo-4164088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="card1"></img>
                         <h2>Heading</h2>
                         <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                        <p><a className="btn btn-secondary" href="/" >View details &raquo;</a></p>
+                        <p><Link className="btn btn-secondary" to="/" >View details &raquo;</Link></p>
                         
                     </div>
                     <div className="col-lg-4">
@@ -69,7 +70,7 @@ function Home() {
 
                         <h2>Heading</h2>
                         <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                        <p><a className="btn btn-secondary" href="/" >View details &raquo;</a></p>
+                        <p><Link className="btn btn-secondary" to="/" >View details &raquo;</Link></p>
                 
                     </div>
                     <div className="col-lg-4">
@@ -77,7 +78,7 @@ function Home() {
 
                         <h2>Heading</h2>
                         <p>And lastly this, the third column of representative placeholder content.</p>
-                        <p><a className="btn btn-secondary" href="/">View details &raquo;</a></p>
+                        <p><Link className="btn btn-secondary" to="/">View details &raquo;</Link></p>
                     
                     </div>
                 </div>
