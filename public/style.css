@@ -19,6 +19,11 @@
     margin: 30px auto;
     
 }
+@media  (max-width: 700px){
+  .register{
+    width: 90%;
+  }
+}
 label {
   padding-right: 5px;
   margin-left: 15px;
@@ -257,5 +262,7 @@ label {
       margin-top: 7rem;
     }
   }
+
+  
   
   
